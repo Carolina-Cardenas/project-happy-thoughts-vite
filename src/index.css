@@ -11,3 +11,257 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.main-wrapper {
+  margin: 20px auto;
+  padding: 5px var(--general-padding);
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+.post-wrapper { 
+  background-color: #ebebeb; 
+  border: 1px solid rgb(105,105,105); 
+  margin: 0; 
+  padding: 5px var(--general-padding) 15px var(--general-padding); 
+  display: flex; 
+  flex-wrap: wrap; 
+  flex-direction: column; 
+  justify-content: flex-start; 
+  align-items: flex-start; 
+  gap: 10px; 
+  box-shadow: var(--box-shadow); 
+  -webkit-box-shadow: var(--box-shadow); 
+  width: var(--main-width-mobile);
+} 
+
+@media (min-width: 675px){ 
+.post-wrapper { 
+  width: var(--main-width-desktop);
+} 
+}     
+
+.post-wrapper h2  { 
+  font-size: 26px; 
+  margin: 5px 0 0;
+} 
+
+.post-wrapper form  { 
+  width: 100%;
+} 
+
+.post-wrapper textarea  { 
+  font-size: 18px; 
+  width: 100%; 
+  margin: 10px 0 2px; 
+  background: white; 
+  text-align: center;
+} 
+
+.post-length { 
+  display: flex; 
+  justify-content: space-between; 
+  margin: 0 0 20px; 
+  padding: 0; 
+  gap: 25px;
+} 
+
+.post-wrapper button  { 
+  background-color: #ffb7d2; 
+  border-radius: 25px; 
+  padding: 5px 10px; 
+  margin: 0 0 5px; 
+  border: none; 
+  font-size: 18px; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  gap: 5px; 
+  cursor: pointer;
+} 
+
+.post-wrapper button:hover { 
+  background-color: var(--hover-color);
+} 
+
+p { 
+  word-break: break-all; 
+  white-space: normal;
+} 
+
+.error { 
+  font-size: 16px; 
+  color: gray; 
+  margin: 0;
+} 
+
+.length { 
+  color: gray; 
+  margin: 0; 
+  min-width: 50px;
+} 
+
+.emoji { 
+  font-size: 24px;
+} 
+
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media (max-width: 767px) {
+  h2 {
+    font-size: 24px;
+  }
+
+  textarea {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .post-length {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .error {
+    font-size: 14px;
+  }
+
+  .length {
+    font-size: 14px;
+  }
+
+  #submitPostBtn {
+    font-size: 16px;
+  }
+}
+
+/* Estilos para pantallas medianas y grandes (tabletas y escritorio) */
+
+@media (min-width: 675px){
+.main-wrapper {
+    width: 60%;
+}
+}
+@media (min-width: 768px) {
+  h2 {
+    font-size: 32px;
+  }
+
+  textarea {
+    width: 80%;
+    font-size: 18px;
+  }
+
+  .post-length {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .error {
+    font-size: 16px;
+  }
+
+  .length {
+    font-size: 16px;
+  }
+
+  #submitPostBtn {
+    font-size: 18px;
+  }
+}
+button  { 
+  background-color: #ffb7d2; 
+  border-radius: 25px; 
+  padding: 5px 10px; 
+  margin: 0 0 5px; 
+  border: none; 
+  font-size: 18px; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  gap: 5px; 
+  cursor: pointer;
+} 
+
+.post-wrapper button:hover { 
+  background-color: var(--hover-color);
+} 
+
+.info-wrapper { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 5px;
+} 
+.list-wrapper {
+  margin: 0;
+  padding: 5px var(--general-padding);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.message { 
+  border: 1px solid rgb(105,105,105); 
+  background-color: #fff; 
+  width: 100%; 
+  display: flex; 
+  flex-direction: column; 
+  padding: var(--general-smaller-padding); 
+  box-shadow: var(--box-shadow); 
+  -webkit-box-shadow: var(--box-shadow);
+} 
+
+@media (min-width: 675px){ 
+.message { 
+  width: 100%;
+} 
+}     
+
+.like-button { 
+  background-color: #d1d1d1; 
+  padding: 10px; 
+  border-radius: 50%; 
+  border: none; 
+  cursor: pointer; 
+  animation: pulse-small 2s infinite;
+} 
+
+.liked { 
+  background-color: #ee8bb4;
+} 
+
+.like-button:hover { 
+  background-color: var(--hover-color);
+} 
+
+.num-likes { 
+  margin-left: 5px;
+} 
+
+.emoji { 
+  font-size: 24px;
+} 
+
+
+@keyframes pulse-small { 
+0% {  
+    transform: scale(1); 
+    transform: scale(1); 
+}  
+50% {  
+    transform: scale(1.1); 
+    transform: scale(1.1); 
+}  
+100% {  
+    transform: scale(1); 
+    transform: scale(1); 
+}  
+
+} 
+
