@@ -7,7 +7,7 @@ export const Show = ({ createdAt, hearts, message}) => {
     const timeDifference = currentTime - createdAt;
   
     const minutesAgo = Math.floor(timeDifference / (1000 * 60));
-    // console.log(minutesAgo)
+    
     if (minutesAgo < 1) {
       return "Just now";
     } else if (minutesAgo === 1) {
@@ -24,9 +24,9 @@ export const Show = ({ createdAt, hearts, message}) => {
     }
   }
   
-  // const specificTime = new Date("2023-10-30T12:00:00");
+  
    const timeAgoString = timeAgo(createdAt);
-  // console.log(timeAgoString); // "about 1 hour ago" o similar
+  
   
   return (
     <div className="message">
@@ -47,6 +47,7 @@ export const Show = ({ createdAt, hearts, message}) => {
       <div className="info-time">
          {timeAgoString}
       </div>
+      <div id="container"></div>
     </div>
   </div>
   
