@@ -1,3 +1,5 @@
+import React from "react";
+import{useState} from "react"
 export const Send = ({ setNewMessage, handleSend, newMessage }) => {
   const [charCount, setCharCount] = useState(0);
 
@@ -20,7 +22,7 @@ export const Send = ({ setNewMessage, handleSend, newMessage }) => {
           rows="3"
           placeholder="Send your happy thoughts here"
           value={newMessage}
-          onChange={(e) => setNewMessage(e.target.value)}
+          onChange={handleInputChange}
           maxLength={140}
         ></textarea>
         <div className="post-length">
